@@ -1,10 +1,10 @@
 ---
-title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit.'
-date: '2018-11-23'
-tags: ['JavaScript', 'React']
+title: 'First post!'
+date: '2019-03-11'
+tags: ['AWS', 'Deployment']
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper felis efficitur, pretium neque eget, ultrices nisi. Proin malesuada massa in tempor hendrerit. Mauris eu ligula tellus. Maecenas sed turpis porta, blandit ex id, ornare odio. Phasellus vitae fermentum justo. Suspendisse faucibus lectus at tortor dignissim imperdiet. Aenean tempor consectetur volutpat. Vivamus vel diam luctus, aliquam risus sit amet, rhoncus enim.
+So eventually I'll use this post to explain how the website gets served n' stuff.
 
 ```javascript
 const foo = {
@@ -13,3 +13,6 @@ const foo = {
 
 console.log(foo)
 ```
+
+Check out this cool image!
+![alt text](https://cloudcraft.co/api/blueprint/99827318-16df-4f07-910b-8849b9cd0234/png?grid=true&transparent=true&width=1280&height=720 "my cool image")

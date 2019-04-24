@@ -163,7 +163,7 @@ export default ({ title, authorName }) => (
       <div>
         <p>
           <StyledHref
-            href="https://www.linkedin.com/in/vimalraj-selvam/"
+            href="https://www.linkedin.com/in/william-tait/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -172,7 +172,7 @@ export default ({ title, authorName }) => (
         </p>
         <p>
           <StyledHref
-            href="https://github.com/email2vimalraj"
+            href="https://github.com/wtait1"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -37,6 +37,15 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-'
@@ -47,6 +56,9 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-styled-components'
+    'gatsby-plugin-styled-components',
+    `gatsby-remark-copy-linked-files`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ]
 }

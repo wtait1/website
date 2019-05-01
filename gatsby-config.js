@@ -15,8 +15,8 @@ module.exports = {
         theme_color: '#6b37bf',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: 'standalone'
-        // icon: 'public/favicon.png' // This path is relative to the root of the site.
+        display: 'standalone',
+        icon: 'src/images/watermelon.png' // This path is relative to the root of the site.
       }
     },
     {
@@ -42,7 +42,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
+              maxWidth: 384,
             },
           },
           {

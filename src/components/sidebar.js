@@ -5,7 +5,6 @@ import {
   FaHome,
   FaUserSecret,
   FaLinkedin,
-  FaGithub,
   FaHashtag
 } from 'react-icons/fa'
 
@@ -154,11 +153,6 @@ export default ({ title, authorName }) => (
             <FaUserSecret /> <span>About</span>
           </StyledLink>
         </p>
-        <p>
-          <StyledLink to="/tags">
-            <FaHashtag /> <span>Tags</span>
-          </StyledLink>
-        </p>
       </div>
       <div>
         <p>
@@ -171,13 +165,9 @@ export default ({ title, authorName }) => (
           </StyledHref>
         </p>
         <p>
-          <StyledHref
-            href="https://github.com/wtait1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub /> <span>Github</span>
-          </StyledHref>
+          <StyledLink to="/tags">
+            <FaHashtag /> <span>Tags</span>
+          </StyledLink>
         </p>
       </div>
     </MenuWrapper>

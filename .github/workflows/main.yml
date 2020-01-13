@@ -1,0 +1,39 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      
+    - name: build site
+      uses: jzweifel/gatsby-cli-github-action@v1.0.0
+      with:
+        gatsby-arg: build --prefix-paths
+        
+    - name: sync s3
+      uses: jakejarvis/s3-sync-action@v0.5.0
+      with:
+        args: --exclude '.git*/*' --delete
+      env:
+        AWS_REGION: 'us-west-1'
+        SOURCE_DIR: 'public'
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: invalidate cdn
+      uses: awact/cloudfront-action@0.1.1
+      env:
+        DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+        PATHS: '/*'
+        AWS_REGION: 'us-west-1'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

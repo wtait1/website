@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Welcome!',
+    title: 'Hello!',
     siteDescription: 'A website collab between Will & Gatsby',
     authorName: 'Will Tait'
   },

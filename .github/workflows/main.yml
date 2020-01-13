@@ -16,7 +16,7 @@ jobs:
     - name: build site
       uses: jzweifel/gatsby-cli-github-action@v1.0.0
       with:
-        gatsby-arg: build --prefix-paths
+        gatsby-arg: build
         
     - name: sync s3
       uses: jakejarvis/s3-sync-action@v0.5.0

@@ -11,7 +11,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "now-build": "npm run build",
-    "deploy": "gatsby build --prefix-paths && s3-deploy './public/**' --cwd './public/' --bucket wtait.me  --deleteRemoved --gzip && npm run invalidate",
+    "deploy": "gatsby build && s3-deploy './public/**' --cwd './public/' --bucket wtait.me  --deleteRemoved --gzip && npm run invalidate",
     "invalidate": "aws cloudfront create-invalidation --distribution-id E5FSQIFA4P2Z9 --paths \"/*\""
   },
   "dependencies": {

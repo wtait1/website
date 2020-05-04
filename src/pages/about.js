@@ -1,8 +1,12 @@
 import React from 'react'
-
 import Layout from '../components/layout'
-
 import me from "./about_me.jpg"
+import styled from 'styled-components'
+
+const StyledImage = styled.img`
+  max-width: 50%;
+  align-self: center;
+`
 
 export default () => (
   <Layout>
@@ -10,7 +14,7 @@ export default () => (
       Hello there!
     </h1>
 
-    <img src={me} alt="me" />
+    <StyledImage src={me} alt="me"/>
 
     <p>
       My name is Will.  I'm a software engineer by weekday, outdoor enthusiast by weekend,
